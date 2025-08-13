@@ -3,7 +3,7 @@ import {config} from "../config/index.js";
 export const BUILD_ENV_WORLD_COIN = 1
 export const BUILD_ENV_PI_NET_WORK = 2
 export const BUILD_ENV_TELEGRAM = 3
-export const BUILD_BUNDLE = BUILD_ENV_TELEGRAM
+export const BUILD_BUNDLE = BUILD_ENV_WORLD_COIN
 
 // export const BASE_API_URL = "http://127.0.0.1:8887"
 export const BASE_API_URL = config.apiUrl;
