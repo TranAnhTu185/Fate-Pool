@@ -1,0 +1,41 @@
+{
+  "name": "pot",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@esbuild-plugins/node-globals-polyfill": "^0.2.3",
+    "@quasar/extras": "^1.16.17",
+    "@ton/core": "^0.60.1",
+    "@ton/crypto": "^3.3.0",
+    "@ton/ton": "^15.2.1",
+    "@tonconnect/ui": "^2.0.12",
+    "@vuesimple/vs-toast": "^3.0.9",
+    "@worldcoin/minikit-js": "^1.6.0",
+    "axios": "^1.8.1",
+    "buffer": "^6.0.3",
+    "eruda": "^3.4.1",
+    "mitt": "^3.0.1",
+    "moment": "^2.30.1",
+    "moment-timezone": "^0.5.48",
+    "pinia": "^3.0.1",
+    "quasar": "^2.18.1",
+    "uuid": "^11.0.5",
+    "vue": "^3.5.13",
+    "vue-i18n": "^11.1.1",
+    "vue-router": "^4.5.0"
+  },
+  "devDependencies": {
+    "@quasar/vite-plugin": "^1.9.0",
+    "@vitejs/plugin-vue": "^5.2.1",
+    "sass-embedded": "^1.85.1",
+    "vite": "^6.1.0",
+    "vite-plugin-node-polyfills": "^0.23.0",
+    "vite-plugin-vue-devtools": "^7.7.2"
+  }
+}
