@@ -160,7 +160,8 @@ export default {
             return;
         }
 
-        const walletAddress = MiniKit.walletAddress;
+        // const walletAddress = MiniKit.walletAddress;
+        const walletAddress = finalPayload.address;
         const user = await MiniKit.getUserByAddress(walletAddress)
         console.log('user: ' + JSON.stringify(user))
         if (user === null || user === undefined) {
@@ -174,9 +175,9 @@ export default {
         const params = {
             payload: finalPayload,
             nonce,
-            wallet_address: walletAddress,
             username,
             profile_picture_url: profilePictureUrl,
+            wallet_address: walletAddress,
         };
 
         console.log("params: ", JSON.stringify(params))
