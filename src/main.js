@@ -23,6 +23,6 @@ app.use(Quasar, {
     plugins: {},
 })
 app.provide('websocket', ws);
-eruda.init();
+// eruda.init();
 app.use(i18n)
 app.mount('#app')
