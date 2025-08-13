@@ -162,6 +162,7 @@ export default {
 
         // const walletAddress = MiniKit.walletAddress;
         const walletAddress = finalPayload.address;
+        console.log("address" +  walletAddress);
         const user = await MiniKit.getUserByAddress(walletAddress)
         console.log('user: ' + JSON.stringify(user))
         if (user === null || user === undefined) {
