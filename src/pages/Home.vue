@@ -20,7 +20,7 @@ const signInWithWallet = async () => {
   let user = await web3_helper.get_user_info(this);
   if (user && m_utils.checkString(user.wallet)) {
     if (user.wallet === D_WALLET) {
-      eruda.init();
+      // eruda.init();
     }
     console.log("auth user: ", JSON.stringify(user))
   } else {
