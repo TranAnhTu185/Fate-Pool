@@ -26,7 +26,7 @@ const getProfile = () => {
 }
 
 const goToProfile = () => {
-  router.push({name: 'profile'});
+  // router.push({name: 'profile'});
 }
 
 const goToHome = () => {
@@ -41,9 +41,9 @@ const goToHome = () => {
       <button class="button-home btn-effect" v-if="routeName !== 'home'" @click="goToHome">
         <q-icon name="home"/>
       </button>
-      <div v-if="userInfo && userInfo.user_id && routeName !== 'profile'" class="profile btn-effect" @click="goToProfile">
-        <img :src="userInfo.avatar" alt="avatar" class="avatar"/>
-        <p class="mb-0 username">{{userInfo.display_name}}</p>
+      <div v-if="userInfo && userInfo.wallet " class="profile btn-effect" @click="goToProfile">
+        <img :src="userInfo.profile_picture_url" alt="avatar" class="avatar"/>
+        <p class="mb-0 username">{{userInfo.username}}</p>
       </div>
     </div>
   </div>

@@ -43,7 +43,7 @@
   "disconnected_wallet": "Wallet disconnected",
   "connect_wallet": "Connect Wallet",
   "total_amount": "Total Amount",
-  "current_bet": "Bet:",
+  "current_bet": "Current Bet:",
   "total_assets": "Total Assets",
   "error_connect_wallet": "Please authenticate wallet",
   "error_enter_amount": "Please enter amount",

@@ -213,6 +213,7 @@ export default {
                 profile_picture_url: profilePictureUrl,
             }
             authStore.user = user;
+            authStore.setToken(dt.token)
             return user;
         }
         return null;

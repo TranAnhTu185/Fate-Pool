@@ -6,16 +6,19 @@ import web3_helper from "@/tools/web3_helper.js";
 import VsToast from "@vuesimple/vs-toast";
 import {useI18n} from "vue-i18n";
 import Loading from "@/components/Loading.vue";
-import {useCommonStore} from "@/stores/store.js";
+import {useCommonStore, useAuthStore} from "@/stores/store.js";
 import {CURRENCY} from "@/const.js";
 
 const {t} = useI18n();
+const authStore = useAuthStore();
 
 const isLoading = ref(false);
 const ws = inject('websocket');
 const title = ref('');
 const commonStore = useCommonStore();
 const loadingFromStore = computed(() => commonStore.loading);
+
+const userInfo = computed(() => authStore.user);
 
 onUnmounted(() => {
   ws.off('message', onWsMessage);
@@ -63,6 +66,7 @@ const authentication = async () => {
   if (init_app.init === true) {
     let user = await web3_helper.get_user_info();
     console.log("user: ", user);
+    console.log("user-11111111111", userInfo);
     if (user === undefined || user === null) {
       VsToast.error(t("auth_failed"))
     } else {
